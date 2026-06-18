@@ -6,11 +6,18 @@ declare const styles: {
   readonly checkCircle: string;
   readonly checkCircleActive: string;
   readonly text: string;
+  readonly content: string;
+  readonly dueDate: string;
+  readonly dueDateOverdue: string;
   readonly actions: string;
   readonly editBtn: string;
   readonly deleteBtn: string;
   readonly confirmBtn: string;
   readonly cancelBtn: string;
   readonly editInput: string;
+  readonly editFields: string;
+  readonly editDateRow: string;
+  readonly calIcon: string;
+  readonly editDateInput: string;
 };
 export default styles;
