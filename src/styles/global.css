@@ -28,6 +28,21 @@
   --transition: 150ms ease;
 }
 
+[data-theme='dark'] {
+  --color-bg: #0f172a;
+  --color-surface: #1e293b;
+  --color-surface-hover: #273549;
+  --color-border: #334155;
+  --color-primary: #818cf8;
+  --color-primary-hover: #6366f1;
+  --color-primary-light: #1e2a4a;
+  --color-text: #f1f5f9;
+  --color-text-muted: #94a3b8;
+  --color-text-light: #64748b;
+  --color-success: #4ade80;
+  --color-completed-text: #475569;
+}
+
 *, *::before, *::after {
   box-sizing: border-box;
   margin: 0;

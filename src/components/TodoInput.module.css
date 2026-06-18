@@ -1,12 +1,72 @@
 .form {
   display: flex;
-  align-items: center;
+  flex-direction: column;
   background: var(--color-surface);
   border: 1px solid var(--color-border);
   border-radius: var(--radius-lg) var(--radius-lg) 0 0;
+  box-shadow: var(--shadow-md);
+  overflow: hidden;
+}
+
+.topRow {
+  display: flex;
+  align-items: center;
   padding: 12px 16px;
   gap: 10px;
-  box-shadow: var(--shadow-md);
+  border-bottom: 1px solid var(--color-border);
+}
+
+.bottomRow {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 8px 16px;
+  background: var(--color-surface-hover);
+}
+
+.calIcon {
+  color: var(--color-text-light);
+  flex-shrink: 0;
+}
+
+.dateLabel {
+  font-size: 0.8rem;
+  color: var(--color-text-muted);
+  font-weight: 500;
+  white-space: nowrap;
+}
+
+.dateInput {
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-sm);
+  padding: 3px 8px;
+  font-size: 0.82rem;
+  color: var(--color-text);
+  background: var(--color-surface);
+  outline: none;
+  font-family: inherit;
+  cursor: pointer;
+  transition: border-color var(--transition);
+}
+
+.dateInput:focus {
+  border-color: var(--color-primary);
+}
+
+.clearDate {
+  font-size: 0.75rem;
+  color: var(--color-text-muted);
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 2px 4px;
+  border-radius: var(--radius-sm);
+  transition: color var(--transition), background var(--transition);
+}
+
+.clearDate:hover {
+  background: #fee2e2;
+  color: var(--color-danger);
 }
 
 .toggleAll {

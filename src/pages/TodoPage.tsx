@@ -1,9 +1,10 @@
 import styles from './TodoPage.module.css';
 import { useTodos } from '@/hooks/useTodos';
+import { useTheme } from '@/hooks/useTheme';
 import TodoInput from '@/components/TodoInput';
 import TodoList from '@/components/TodoList';
 import TodoFooter from '@/components/TodoFooter';
-import { CheckSquare } from 'lucide-react';
+import Navbar from '@/components/Navbar';
 
 export default function TodoPage() {
   const {
@@ -21,14 +22,13 @@ export default function TodoPage() {
     completedCount,
   } = useTodos();
 
+  const { theme, toggleTheme } = useTheme();
+
   return (
     <div className={styles.page}>
+      <Navbar theme={theme} onToggleTheme={toggleTheme} />
       <div className={styles.container}>
         <header className={styles.header}>
-          <div className={styles.logo}>
-            <CheckSquare size={32} color="var(--color-primary)" />
-          </div>
-          <h1 className={styles.title}>My Todos</h1>
           <p className={styles.subtitle}>Stay organized, get things done.</p>
         </header>
 
